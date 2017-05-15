@@ -21,7 +21,7 @@ import (
 )
 
 var url = flag.String("post-url", "", "url to post the host data")
-
+var help = flag.Bool("help", false, "show help for this tool")
 func main() {
 	log.SetFlags(0)
 	flag.Set("logtostderr", "true")
@@ -31,8 +31,12 @@ func main() {
 		println("infopusher version 1.0")
 		return
 	}
+        if *help {
+		flag.Usage()
+                return
+	}
 	if *url == "" {
-		fmt.Println("you need to set the parameter post-url")
+                fmt.Println("you need to set the parameter post-url")
 		os.Exit(1)
 	}
 
