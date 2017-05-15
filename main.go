@@ -27,7 +27,7 @@ func main() {
 	flag.Set("logtostderr", "true")
 	flag.Parse()
 
-        if os.Args[1] == "version" {
+	if os.Args[1] == "version" {
 		println("infopusher version 1.0")
 		return
 	}
