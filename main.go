@@ -27,6 +27,10 @@ func main() {
 	flag.Set("logtostderr", "true")
 	flag.Parse()
 
+        if os.Args[1] == "version" {
+		println("infopusher version 1.0")
+		return
+	}
 	if *url == "" {
 		fmt.Println("you need to set the parameter post-url")
 		os.Exit(1)
