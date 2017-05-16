@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/giantswarm/mayu-infopusher.svg?&style=shield&circle-token=b8f4fbcc688135bdb5e8466cdfec46c42ddd5ce3)](https://circleci.com/gh/giantswarm/mayu-infopusher)
+[![Docker Repository on Quay](https://quay.io/repository/giantswarm/mayu-infopusher/status "Docker Repository on Quay")](https://quay.io/repository/giantswarm/mayu-infopusher)
+
 # infopusher
 Tool that is originally included in https://github.com/giantswarm/mayu
 
