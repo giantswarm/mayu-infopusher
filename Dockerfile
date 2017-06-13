@@ -5,7 +5,7 @@ RUN apk add --update ca-certificates \
     && mkdir /embedded
 
 ADD ./mayu-infopusher /mayu-infopusher
-ADD ./embedded/* /embedded/
+ADD ./embedded/ipmitool /embedded/
 
 ENTRYPOINT ["/mayu-infopusher"]
 CMD [ "--help" ]
