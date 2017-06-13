@@ -1,7 +1,6 @@
 FROM frolvlad/alpine-glibc
 
-RUN apk add --update ca-certificates \
-    && rm -rf /var/cache/apk/*\
+RUN apk add --no-cache ca-certificates \
     && mkdir /embedded
 
 ADD ./mayu-infopusher /mayu-infopusher
