@@ -87,7 +87,7 @@ func fetchDMISerial() string {
 	if len(productSerial) == 0 {
 		productSerial = fetchDMIXSerial("chassis_serial")
 	}
-        if productSerial == "0123456789" {
+	if productSerial == "0123456789" {
 		productSerial = fetchDMIXSerial("product_uuid")
 	}
 	return productSerial
@@ -192,7 +192,7 @@ func fetchIPMIAddress() (ip net.IP) {
 	ipmitoolCmd := exec.Command(tempFile.Name(), "lan", "print")
 	output, err := ipmitoolCmd.CombinedOutput()
 	if err != nil {
-		glog.Warningln("Failed to list IPMI ip.",err)
+		glog.Warningln("Failed to list IPMI ip.", err)
 		return
 	}
 	lines := strings.Split(string(output), "\n")
